@@ -1,0 +1,86 @@
+{%load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Edubuzz - Education Bootstrap 5 Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+        
+		<!-- favicon
+		============================================ -->		
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	   
+		<!-- Bootstrap CSS
+		============================================ -->		
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        
+		<!-- Fontawsome CSS
+		============================================ -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        
+        <!-- Metarial Iconic Font CSS
+		============================================ -->
+        <link rel="stylesheet" href="{% static 'css/material-design-iconic-font.min.css' %}">
+        
+        <!-- Plugin CSS
+		============================================ -->
+        <link rel="stylesheet" href="{% static 'css/plugin.css' %}">
+        
+		<!-- Style CSS
+		============================================ -->
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        
+		<!-- Responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        
+		
+	    
+    </head>
+    <body>
+        <!--Loading Area Start-->
+        <div class="loading">
+    		<div class="text-center middle">
+    			<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    		</div>
+    	</div>
+        <!--Loading Area End-->
+        <!--Main Wrapper Start-->
+        <div class="as-mainwrapper">
+            <!--Bg White Start-->
+            <div class="bg-white">
+        {%block content%}
+
+        {%endblock%}
+            </div>   
+            <!--End of Bg White--> 
+        </div> 
+		<!-- jquery
+		============================================ -->		
+        <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery-migrate-3.3.2.min.js' %}"></script>
+        
+		<!-- popper JS
+		============================================ -->		
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        
+		<!-- bootstrap JS
+		============================================ -->		
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        
+		<!-- AJax Mail JS
+		============================================ -->		
+        <script src="{% static 'js/ajax-mail.js' %}"></script>
+        
+		<!-- plugins JS
+		============================================ -->		
+        <script src="{% static 'js/plugins.js' %}"></script>
+        
+		<!-- main JS
+		============================================ -->		
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
