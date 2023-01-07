@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-lg-3 col-12">
                     <div class="logo">
-                        <a href="index.html"><img src="{% static 'img/logo/logo.png' %}" alt="EDUCAT"></a>
+                        <a href="index.html"><img src="{{settings.image.url}}" width = '100px' alt="EDUCAT"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-12">
@@ -31,72 +31,24 @@
                         <div class="mainmenu d-none d-lg-block">
                             <nav>
                                 <ul id="nav">
-                                    <li class="current"><a href="index.html">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home Version 1</a></li>
-                                            <li><a href="index-2.html">Home Version 2</a></li>
-                                        </ul>
+                                    <li class="current"><a href="index.html">Главная страница </a>
+                                        
                                     </li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="gallery.html">Gallery</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="gallery-2.html">Gallery Filtaring</a></li>
-                                            <li><a href="gallery-four-column.html">Gallery Four Column</a></li>
-                                        </ul>
+                                    <li><a href="about.html">О нас</a></li>
+                                    <li><a href="gallery.html">Галлерея</a>
+                                        
                                     </li>
-                                    <li><a href="course.html">Courses</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="courses-details.html">Courses Details</a></li>
-                                        </ul>
+                                    <li><a href="course.html">Курсы</a>
+                                       
                                     </li>
-                                    <li><a href="#">Features</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">Blog<i class="zmdi zmdi-chevron-right"></i></a>
-                                                <ul class="inside-menu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                                    <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Shop<i class="zmdi zmdi-chevron-right"></i></a>
-                                                <ul class="inside-menu">
-                                                    <li><a href="shop.html">Shop</a></li>
-                                                    <li><a href="single-product.html">Single Product</a></li>
-                                                    <li><a href="cart.html">Shopping Cart</a></li>
-                                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                                    <li><a href="checkout.html">Checkout</a></li>
-                                                    <li><a href="login-register.html">Login - Register</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                    <li><a href="#">Блог</a>
+                                        
                                     </li>
-                                    <li><a href="index.html">Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="team-details.html">Team Details</a></li>
-                                            <li><a href="course.html">Courses Page</a></li>
-                                            <li><a href="courses-details.html">Course Details Page</a></li>
-                                            <li><a href="event.html">Event Page</a></li>
-                                            <li><a href="event-details.html">Event Details Page</a></li>
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details Page</a></li>
-                                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                            <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                            <li><a href="wishlist.html">Wishlist Page</a></li>
-                                            <li><a href="checkout.html">Checkout Page</a></li>
-                                            <li><a href="cart.html">Shopping Cart Page</a></li>
-                                            <li><a href="login-register.html">Login Page</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="404.html">404 Error</a></li>
-                                        </ul>
+                                    <li><a href="index.html">Наша команда</a>
+                                       
                                     </li>
-                                    <li><a href="shop.html">Shop</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="single-product.html">Single Product Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    
+                                    <li><a href="contact.html">Контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -130,62 +82,24 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul>
-                                <li><a href="index.html">HOME</a>
-                                    <ul>
-                                        <li><a href="index.html">Home Version 1</a></li>
-                                        <li><a href="index-2.html">Home Version 1</a></li>
-                                    </ul>
+                                <li class="current"><a href="index.html">Главная страница </a>
+                                        
                                 </li>
-                                <li><a href="gallery.html">Gallery</a>
-                                    <ul>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="gallery-2.html">Gallery Filtaring</a></li>
-                                        <li><a href="gallery-four-column.html">Gallery Four Column</a></li>
-                                    </ul>
+                                <li><a href="about.html">О нас</a></li>
+                                <li><a href="gallery.html">Галлерея</a>
+                                    
                                 </li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                                <li><a href="course.html">Courses</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="courses-details.html">Courses Details</a></li>
-                                    </ul>
+                                <li><a href="course.html">Курсы</a>
+                                   
                                 </li>
-                                <li><a href="shop.html">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                    </ul>
+                                <li><a href="#">Блог</a>
+                                    
                                 </li>
-                                <li><a href="event.html">Event</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="event-details.html">Event Details</a></li>
-                                    </ul>
+                                <li><a href="index.html">Наша команда</a>
+                                   
                                 </li>
-                                <li><a href="blog.html">Blog</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Pages</a>
-                                    <ul>
-                                        <li><a href="team-details.html">Team Details</a></li>
-                                        <li><a href="course.html">Courses Page</a></li>
-                                        <li><a href="courses-details.html">Course Details Page</a></li>
-                                        <li><a href="event.html">Event Page</a></li>
-                                        <li><a href="event-details.html">Event Details Page</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="blog-details.html">Blog Details Page</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-no-sidebar.html">Blog No Sidebar</a></li>
-                                        <li><a href="wishlist.html">Wishlist Page</a></li>
-                                        <li><a href="checkout.html">Checkout Page</a></li>
-                                        <li><a href="cart.html">Shopping Cart Page</a></li>
-                                        <li><a href="login-register.html">Login Page</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="404.html">404 Error</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                
+                                <li><a href="contact.html">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>					
