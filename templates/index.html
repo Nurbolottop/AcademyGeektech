@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-lg-3 col-12">
                     <div class="logo">
-                        <a href="index.html"><img src="{{settings.image.url}}" width = '100px' alt="EDUCAT"></a>
+                        <a href="{% url 'index'%}"><img src="{{settings.image.url}}" width = '100px' alt="EDUCAT"></a>
                     </div>
                 </div>
                 <div class="col-lg-9 col-12">
@@ -31,24 +31,24 @@
                         <div class="mainmenu d-none d-lg-block">
                             <nav>
                                 <ul id="nav">
-                                    <li class="current"><a href="index.html">Главная страница </a>
+                                    <li class="current"><a href="{% url 'index'%}">Главная страница </a>
                                         
                                     </li>
-                                    <li><a href="about.html">О нас</a></li>
-                                    <li><a href="gallery.html">Галлерея</a>
+                                    <li><a href="{% url 'about'%}">О нас</a></li>
+                                    <li><a href="{% url 'gallery'%}">Галлерея</a>
                                         
                                     </li>
-                                    <li><a href="course.html">Курсы</a>
+                                    <li><a href="{% url 'course'%}">Курсы</a>
                                        
                                     </li>
-                                    <li><a href="#">Блог</a>
+                                    <li><a href="{% url 'blog'%}">Блог</a>
                                         
                                     </li>
-                                    <li><a href="index.html">Наша команда</a>
+                                    <li><a href="{% url 'c'%}">Наша команда</a>
                                        
                                     </li>
                                     
-                                    <li><a href="contact.html">Контакты</a></li>
+                                    <li><a href="{% url 'contacts%}">Контакты</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -82,24 +82,24 @@
                     <div class="mobile-menu">
                         <nav id="dropdown">
                             <ul>
-                                <li class="current"><a href="index.html">Главная страница </a>
+                                <li class="current"><a href="{% url 'index'%}">Главная страница </a>
                                         
                                 </li>
-                                <li><a href="about.html">О нас</a></li>
-                                <li><a href="gallery.html">Галлерея</a>
+                                <li><a href="{% url 'about'%}">О нас</a></li>
+                                <li><a href="{% url 'gallery'%}">Галлерея</a>
                                     
                                 </li>
-                                <li><a href="course.html">Курсы</a>
+                                <li><a href="{% url 'course'%}">Курсы</a>
                                    
                                 </li>
-                                <li><a href="#">Блог</a>
+                                <li><a href="{% url 'blog'%}">Блог</a>
                                     
                                 </li>
-                                <li><a href="index.html">Наша команда</a>
+                                <li><a href="{% url '{% url 'blog'%}'%}">Наша команда</a>
                                    
                                 </li>
                                 
-                                <li><a href="contact.html">Контакты</a></li>
+                                <li><a href="{% url 'contacts%}">Контакты</a></li>
                             </ul>
                         </nav>
                     </div>					
@@ -119,7 +119,7 @@
                 <h1>{{slide.name_slide1}}</h1>
                 <p>{{slide.description_slide1}}</p>
                 <div class="slider-btn">
-                    <a class="button-default" href="course.html">View Courses</a>
+                    <a class="button-default" href="{% url 'course'%}">View Courses</a>
                 </div>
             </div>
         </div>
@@ -130,7 +130,7 @@
                 <h1>{{slide.name_slide2}}</h1>
                 <p>{{slide.description_slide2}}</p>
                 <div class="slider-btn">
-                    <a class="button-default" href="course.html">View Courses</a>
+                    <a class="button-default" href="{% url 'course'%}">View Courses</a>
                 </div>
             </div>
         </div>
@@ -147,7 +147,7 @@
                     <h3>Provide best <span class="orange-color">education</span> <span class="orange-color">services</span> for you</h3>
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita, provident cupiditate in excepturi.</p>
-                    <a class="button-default" href="course.html">Learn More</a>	      
+                    <a class="button-default" href="{% url 'course'%}">Learn More</a>	      
                 </div>
             </div>
             <div class="col-lg-5">
@@ -278,7 +278,7 @@
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 text-center">
-                <a href="course.html" class="button-default button-large">Browse All Courses <i class="zmdi zmdi-chevron-right"></i></a>
+                <a href="{% url 'course'%}" class="button-default button-large">Browse All Courses <i class="zmdi zmdi-chevron-right"></i></a>
             </div>
         </div>
     </div>
@@ -647,7 +647,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="single-footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html"><img src="{% static 'img/logo/footer.png' %}" alt=""></a>
+                            <a href="{% url 'index'%}"><img src="{% static 'img/logo/footer.png' %}" alt=""></a>
                         </div>
                         <p>There are many variations of passg of Lorem Ipsum available, but thmajority have suffered altem, </p>
                         <div class="social-icons">
