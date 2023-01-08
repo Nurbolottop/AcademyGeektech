@@ -17,6 +17,6 @@ class Course(models.Model):
         return self.phone_site
 
     class Meta:
-        verbose_name = "Новости"
-        verbose_name_plural = "Новости"
+        verbose_name = "Курсы"
+        verbose_name_plural = "Курсы"
         ordering = ('id', )
