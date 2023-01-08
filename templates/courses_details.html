@@ -11,11 +11,10 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="breadcrumb-text">
-                                    <h1 class="text-center">COURSES DETAILS</h1>
+                                    <h1 class="text-center">{{course.name}}</h1>
                                     <div class="breadcrumb-bar">
                                         <ul class="breadcrumb text-center">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li>COURSES DETAILS</li>
+                                            <li><a href="{% url 'index'%}">Домой</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -31,47 +30,14 @@
                            <div class="col-lg-9 col--12">
                                 <div class="course-details-right-sidebar">
                                     <div class="events-details-img1 img-full">
-                                        <h3>Photoshop CC 2017</h3>
-                                        <img alt="" src="img/details/1.jpg">
+                                        <h3>{{course.name}}</h3>
+                                        <img alt="" width = "500px"src="{{course.image.url}}">
                                     </div>
-                                    <div class="single-item-content">
-                                       <div class="single-item-comment-view">
-                                           <span><i class="zmdi zmdi-accounts"></i>59</span>
-                                           <span><i class="zmdi zmdi-favorite"></i>19</span>
-                                       </div>
-                                       <div class="single-item-rating">
-                                           <i class="zmdi zmdi-star"></i>
-                                           <i class="zmdi zmdi-star"></i>
-                                           <i class="zmdi zmdi-star"></i>
-                                           <i class="zmdi zmdi-star"></i>
-                                           <i class="zmdi zmdi-star-half"></i>
-                                       </div>
-                                    </div>
-                                    <div class="course-duration mb-30">
-                                        <div class="duration-title">
-                                            <div class="text"><span>Lessons</span> <span class="text-right">Estimated Time</span></div>
-                                        </div>
-                                        <div class="duration-text">
-                                            <div class="text"><span>Print design</span> <span class="text-right">15 days</span></div>
-                                            <div class="text"><span>web design</span> <span class="text-right">10 days</span></div>
-                                            <div class="text"><span>apps design</span> <span class="text-right">16 days</span></div>
-                                            <div class="text"><span>web design</span> <span class="text-right">20 days</span></div>
-                                            <div class="text"><span>web design</span> <span class="text-right">22 days</span></div>
-                                        </div>
-                                    </div>
+
                                     <div class="about-lectures">
-                                        <h3>Course Description</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  t ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                        <h3></h3>
                                     </div>
-                                    <div class="event-content">
-                                        <h3 class="content2">Course Content</h3>
-                                        <ul>
-                                            <li>Over 40 lectures and 60 hours of content</li>
-                                            <li>Live Project End to End Software Testing Training Included</li>
-                                            <li>Information packed practical training starting from basics to advanced testing techniques.</li>
-                                            <li>Course content designed by considering current software testing technology and the job market.</li>
-                                            <li>Best suitable for beginners to advanced level users and who learn faster when demonstrated.</li>
-                                            <li>Practical assignments at the end of every session.</li>
+                                            <li>{{course.description}}</li>
                                         </ul>
                                     </div>
                                 </div>

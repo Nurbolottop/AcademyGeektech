@@ -14,9 +14,8 @@ class Course(models.Model):
         verbose_name="Описание"
     )
     def __str__(self):
-        return self.phone_site
+        return self.name
 
     class Meta:
         verbose_name = "Курсы"
         verbose_name_plural = "Курсы"
-        ordering = ('id', )

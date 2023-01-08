@@ -12,12 +12,14 @@ def course(request):
         'course': course,
     }
     return render(request, 'course.html', context)
-    
-def course_detils(request):
+
+def course_details(request,id):
+
     settings = Settins.objects.latest('id') 
-    course = Course.get(id =id)
+    course = Course.objects.get(id =id)
+
     context = {
         'settings': settings,
         'course': course,
     }
-    return render(request, 'course_detils.html', context)
+    return render(request, 'courses_details.html', context)
