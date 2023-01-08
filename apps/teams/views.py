@@ -13,4 +13,4 @@ def teams(request):
 
     }
 
-    return render(request, 'course.html', context)
+    return render(request, 'teams.html', context)
