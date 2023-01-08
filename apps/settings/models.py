@@ -44,8 +44,28 @@ class Slides(models.Model):
         verbose_name="Описание второго слайда"
     )
     def __str__(self):
-        return self.name_slide
+        return self.name_slide1
 
     class Meta:
         verbose_name = "Слайды"
         verbose_name_plural = "Слайды"
+
+class It(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    description = models.TextField(
+        verbose_name="Описание!"
+    )
+    image = models.ImageField(
+        upload_to="it",
+        verbose_name="Фотография"
+        )
+    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "ПОЧЕМУ IT - ЭТО КРУТО?"
+        verbose_name_plural = "ПОЧЕМУ IT - ЭТО КРУТО?"

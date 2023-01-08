@@ -114,10 +114,10 @@
 <div class="slider-area">
     <div class="hero-slider owl-carousel">
         <!--Single Slider Start-->
-        <div class="single-slider" style="background-image: url({% static 'img/slider/1.jpg' %})"> 
+        <div class="single-slider" style="background-image: url({{slide.slide_image1.url}})"> 
             <div class="hero-slider-content">
-                <h1>Education Needs <br> Complete Solution</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque unde, at molestias voluptatem praesentium quia magnam? Iste aliquam, voluptas sapiente animi, repudiandae officiis voluptatem tempore alias nihil. Aperiam voluptatum, velit.</p>
+                <h1>{{slide.name_slide1}}</h1>
+                <p>{{slide.description_slide1}}</p>
                 <div class="slider-btn">
                     <a class="button-default" href="course.html">View Courses</a>
                 </div>
@@ -125,10 +125,10 @@
         </div>
         <!--Single Slider End-->
         <!--Single Slider Start-->
-        <div class="single-slider" style="background-image: url({% static 'img/slider/2.jpg' %})">   
+        <div class="single-slider" style="background-image: url({{slide.slide_image2.url}})">   
             <div class="hero-slider-content">
-                <h1>Education Needs <br> Complete Solution</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque unde, at molestias voluptatem praesentium quia magnam? Iste aliquam, voluptas sapiente animi, repudiandae officiis voluptatem tempore alias nihil. Aperiam voluptatum, velit.</p>
+                <h1>{{slide.name_slide2}}</h1>
+                <p>{{slide.description_slide2}}</p>
                 <div class="slider-btn">
                     <a class="button-default" href="course.html">View Courses</a>
                 </div>
@@ -576,70 +576,34 @@
             <div class="col-md-12">
                 <div class="section-title-wrapper">
                     <div class="section-title">
-                        <h3>OUR EVENTS</h3>
-                        <p>There are many variations of passages</p>
-                    </div>
+                        <h3>ПОЧЕМУ IT - ЭТО КРУТО?</h3>
+                        </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6">
+            {%for it in it%}
+            <div class="col-lg-4 col-md-6" >
                 <div class="single-event-item">
                     <div class="single-event-image">
-                        <a href="event-details.html">
-                            <img src="{% static 'img/event/1.jpg' %}" alt="">
-                            <span>15 Jun</span>
+                        <a >
+
+                            <img src="{{it.image.url}}" style="max-width:4`00px;"
+                             alt="">
+                            
                         </a>
+
                     </div>
                     <div class="single-event-text">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
+                        <h3><a >{{it.name}}</a></h3>
                         <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i>Dhaka Bangladesh</span>
+                            
                         </div>
-                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                        <a class="button-default" href="event-details.html">LEARN Now</a>
+                        <p>{{it.description}}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-event-item">
-                    <div class="single-event-image">
-                        <a href="event-details.html">
-                            <img src="{% static 'img/event/2.jpg' %}" alt="">
-                            <span>20 Apr</span>
-                        </a>
-                    </div>
-                    <div class="single-event-text">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
-                        <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i>Jessore Bangladesh</span>
-                        </div>
-                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                        <a class="button-default" href="event-details.html">LEARN Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-event-item">
-                    <div class="single-event-image">
-                        <a href="event-details.html">
-                            <img src="{% static 'img/event/3.jpg' %}" alt="">
-                            <span>06 Dec</span>
-                        </a>
-                    </div>
-                    <div class="single-event-text">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
-                        <div class="single-item-comment-view">
-                            <span><i class="zmdi zmdi-time"></i>4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i>Dhaka. Bangladesh</span>
-                        </div>
-                        <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr sarata din megla....</p>
-                        <a class="button-default" href="event-details.html">LEARN Now</a>
-                    </div>
-                </div>
-            </div>
+            {%endfor%}
         </div>
     </div>
 </div>
