@@ -24,8 +24,10 @@ class News(models.Model):
 
 
 class Comment(models.Model):
+    post = models.ForeignKey(News, on_delete=models.CASCADE, related_name="post_comment")
+
     name = models.CharField(max_length=255, verbose_name="Имя")
-    email = models.ForeignKey(News, on_delete=models.CASCADE, related_name="post_comment")
+    email = models.CharField(max_length=255, verbose_name="Почта")
     message = models.CharField(max_length=255,verbose_name="Сообщение")
     created = models.DateTimeField(auto_now_add=True)
 
@@ -34,5 +36,6 @@ class Comment(models.Model):
         return self.name
 
     class Meta:
+        # on_delete=models.CASCADE,
         verbose_name = "Коментарии"
         verbose_name_plural = "Коментарии"

@@ -24,23 +24,26 @@ def news_details(request,id):
     settings = Settins.objects.latest('id') 
     news = News.objects.get(id =id)
     contacts = Contacts.objects.latest('id') 
-    if request.method =="POST":
-        email = request.POST.get('email')
-        Mailing.objects.create(email = email)
+    # if request.method =="POST":
+    #     email = request.POST.get('email')
+    #     Mailing.objects.create(email = email)
 
-        send_mail(
-            f'{email}',
+    #     send_mail(
+    #         f'{email}',
 
-            f'Здравствуйте {email}, Спасибо за то что подписались на нашу рассылку,',
-            "noreply@somehost.local",
-            [email])
+    #         f'Здравствуйте {email}, Спасибо за то что подписались на нашу рассылку,',
+    #         "noreply@somehost.local",
+    #         [email])
         
-        return redirect('index')
+    #     return redirect('index')
+
     if request.method == "POST":
         if 'comment' in request.POST:
+                name = request.POST.get('name')
+                email = request.POST.get('email')
                 message = request.POST.get('message')
-                
-                comment = Comment.objects.create(name = request.name, email = news, message = message)
+                created = request.POST.get('created')
+                comment = Comment.objects.create(name = name, post = news, email = email, message = message,created = created)
                 return redirect('news_detail', news.id)
     context = {
         'settings': settings,
