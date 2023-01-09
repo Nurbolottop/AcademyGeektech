@@ -38,16 +38,14 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="about-container">
-                    <h3>Provide best <span class="orange-color">education</span> <span class="orange-color">services</span> for you</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita, provident cupiditate in excepturi.</p>
-                    <a class="button-default" href="{% url 'course'%}">Learn More</a>	      
+                    <h3>{{about.name}}</h3>
+                    <p>{{about.descriptions}}</p>
                 </div>
             </div>
             <div class="col-lg-5">
                 <!--About Image Area Start-->
                 <div class="about-image-area img-full">
-                    <img src="{% static 'img/about/about1.jpg' %}" alt="">
+                    <img src="{{about.image.url}}" alt="">
                 </div>
                 <!--About Image Area End-->
             </div>
@@ -93,26 +91,26 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-fun-factor mb-30">
-                    <h2><span class="counter">79</span>+</h2>
-                    <h4>Teachers</h4>
+                    <h2><span class="counter">{{number.teacher}}</span>+</h2>
+                    <h4>Преподавателя</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-fun-factor mb-30">
-                    <h2><span class="counter">120</span>+</h2>
-                    <h4>Members</h4>
+                    <h2><span class="counter">{{number.students}}</span>+</h2>
+                    <h4>Студентов</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-fun-factor mb-30">
-                    <h2><span class="counter">36</span>+</h2>
-                    <h4>Courses</h4>
+                    <h2><span class="counter">{{number.course}}6</span>+</h2>
+                    <h4>Курсов</h4>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-fun-factor mb-30">
-                    <h2><span class="counter">20</span>+</h2>
-                    <h4>Countries</h4>
+                    <h2><span class="counter">{{number.office}}</span>+</h2>
+                    <h4>Точек</h4>
                 </div>
             </div>
         </div>
@@ -261,7 +259,7 @@
     </div>
 </div> {% endcomment %}
 <!--End of Online Product Area-->
-<div class="testimonial-area">
+{% comment %} <div class="testimonial-area">
     <div class="container">
         <div class="row">
             <div class="testimonial-slider owl-carousel">
@@ -333,7 +331,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> {% endcomment %}
 <!--Testimonial Area End-->
 <!--Event Area Start-->
 <div class="event-area section-padding bg-white">

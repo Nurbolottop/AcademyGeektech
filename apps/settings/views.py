@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from apps.settings.models import Settins,Slides,It
+from apps.settings.models import Settins,Slides,It,Number
 from apps.contacts.models import Contacts
 from apps.course.models import Course
 from apps.news.models import News
-
+from apps.about.models import About
 
 # Create your views here.
 
@@ -14,6 +14,9 @@ def index(request):
     contacts = Contacts.objects.latest('id') 
     course = Course.objects.all()
     news = News.objects.all()
+    number = Number.objects.latest('id')
+    about = About.objects.latest('id')
+
 
     context = {
         'settings': settings,
@@ -22,6 +25,8 @@ def index(request):
         'contacts': contacts,
         'course': course,
         'news': news,
+        'number': number,
+        'about': about,
 
     }
 
