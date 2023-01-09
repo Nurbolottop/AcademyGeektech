@@ -18,11 +18,13 @@ def index(request):
     news = News.objects.all()
     number = Number.objects.latest('id')
     about = About.objects.latest('id')
+
     if request.method =="POST":
         email = request.POST.get('email')
         Mailing.objects.create(email = email)
 
         send_mail(
+            f'{email}',
 
             f'Здравствуйте {email}, Спасибо за то что подписались на нашу рассылку,',
             "noreply@somehost.local",

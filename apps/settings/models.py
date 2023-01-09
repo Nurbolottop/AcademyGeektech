@@ -101,5 +101,5 @@ class Mailing(models.Model):
         return f"{self.email} "
 
     class Meta:
-        verbose_name_plural = "Полученные сообщения "
-        verbose_name = "Полученные сообщения "  
+        verbose_name_plural = "Рассылка "
+        verbose_name = "Рассылка"  

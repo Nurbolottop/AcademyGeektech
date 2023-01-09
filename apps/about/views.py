@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from apps.settings.models import Settins,Number
+from django.shortcuts import render,redirect
+from django.core.mail import send_mail
+from apps.settings.models import Settins,Number,Mailing
 from apps.contacts.models import Contacts
 from apps.about.models import About,Teams
 
@@ -11,6 +12,18 @@ def about(request):
     number = Number.objects.latest('id') 
     about  = About.objects.latest('id')
     team  = Teams.objects.all()
+    if request.method =="POST":
+        email = request.POST.get('email')
+        Mailing.objects.create(email = email)
+
+        send_mail(
+            f'{email}',
+
+            f'Здравствуйте {email}, Спасибо за то что подписались на нашу рассылку,',
+            "noreply@somehost.local",
+            [email])
+        
+        return redirect('index')
     context = {
         'settings': settings,
         'contacts': contacts,
