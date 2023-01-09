@@ -2,7 +2,7 @@
 {%load static %}
 {%block content%}
 {% include 'header.html'%}
-
+<link rel="stylesheet" href="/home/nurbolot/Desktop/OP/Django/project/Geektech/static/css/font-awesome.min.css">
                 <!--End of Header Area-->
                 <!--Breadcrumb Banner Area Start-->
                 <div class="breadcrumb-banner-area">
@@ -13,7 +13,7 @@
                                     <h1 class="text-center">{{team.name}}</h1>
                                     <div class="breadcrumb-bar">
                                         <ul class="breadcrumb text-center">
-                                            <li><a href="{% url 'index '%}">Домой</a></li>
+                                            <li><a href="{% url 'index'%}">Домой</a></li>
                                             <li>{{team.name}}</li>
                                         </ul>
                                     </div>
@@ -45,17 +45,15 @@
                                                 <li><i class="zmdi zmdi-email"></i><a >{{team.email}}</a></li>
                                             </ul>
                                             <div class="social">
-                                                {%if team.facebook%}
-                                                <a href="{{team.facebook}}" class="facebook"><i class="fa fa-facebook"></i></a>
-                                                {% endif%}
+                                               
                                                 {%if team.instagram%}
-                                                <a href="{{team.youtube}}" class="twitter"><i class="fa fa-instagram"></i></a>
+                                                <a href="{{team.youtube}}" class="twitter"><i class="zmdi zmdi-instagram"></i></a>
                                                 {% endif%}
                                                 {%if team.telegram%}
-                                                <a href="{{team.telegram}}" class="linkedin"><i class="fa fa-telegram"></i></a>
+                                                <a href="{{team.telegram}}" class="linkedin"><i class="zmdi zmdi-telegram"></i></a>
                                                 {% endif%}
                                                 {%if team.whatsapp%}
-                                                <a href="#" class="google"><i class="fa fa-whatsapp"></i></a>
+                                                <a href="#" class="google"><i class="zmdi zmdi-whatsapp"></i></a>
                                                 {% endif%}
                                             </div>
                                         </div>

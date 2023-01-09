@@ -37,10 +37,7 @@ class Teams(models.Model):
         max_length=255,
         verbose_name="Почта учителя"
         )
-    faceebook = models.URLField(
-        verbose_name="Facebook",
-        blank=True, null=True
-    )
+    
     instagram = models.URLField(
         verbose_name="Instagram",
         blank=True, null=True
