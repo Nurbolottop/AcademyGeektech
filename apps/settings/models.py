@@ -69,3 +69,29 @@ class It(models.Model):
     class Meta:
         verbose_name = "ПОЧЕМУ IT - ЭТО КРУТО?"
         verbose_name_plural = "ПОЧЕМУ IT - ЭТО КРУТО?"
+
+class Number(models.Model):
+    teacher = models.CharField(
+        max_length=255,
+        verbose_name="Учителя"
+    )
+    students = models.CharField(
+        max_length=255,
+        verbose_name="Ученики"
+    )
+    course = models.CharField(
+        max_length=255,
+        verbose_name="Курсы"
+    )
+    office = models.CharField(
+        max_length=255,
+        verbose_name="Офисы"
+    )
+
+    def __str__(self):
+        return self.teacher
+
+    class Meta:
+        verbose_name = "Geektech в цифрах"
+        verbose_name_plural = "Geektech в цифрах"
+
