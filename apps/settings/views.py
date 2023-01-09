@@ -2,6 +2,7 @@ from django.shortcuts import render
 from apps.settings.models import Settins,Slides,It
 from apps.contacts.models import Contacts
 from apps.course.models import Course
+from apps.news.models import News
 
 
 # Create your views here.
@@ -12,6 +13,7 @@ def index(request):
     it = It.objects.all() 
     contacts = Contacts.objects.latest('id') 
     course = Course.objects.all()
+    news = News.objects.all()
 
     context = {
         'settings': settings,
@@ -19,6 +21,8 @@ def index(request):
         'it': it,
         'contacts': contacts,
         'course': course,
+        'news': news,
+
     }
 
     return render(request, 'index.html', context)
