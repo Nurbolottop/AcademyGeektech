@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from apps.settings.models import Settins,Slides,It,Number
+from django.shortcuts import render,redirect
+from django.core.mail import send_mail
+
+from apps.settings.models import Settins,Slides,It,Number,Mailing
 from apps.contacts.models import Contacts
 from apps.course.models import Course
 from apps.news.models import News
@@ -16,6 +18,18 @@ def index(request):
     news = News.objects.all()
     number = Number.objects.latest('id')
     about = About.objects.latest('id')
+    if request.method =="POST":
+        email = request.POST.get('email')
+        Mailing.objects.create(email = email)
+
+        send_mail(
+
+            f'Здравствуйте {email}, Спасибо за то что подписались на нашу рассылку,',
+            "noreply@somehost.local",
+            [email])
+        
+        return redirect('index')
+
 
 
     context = {

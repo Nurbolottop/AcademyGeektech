@@ -95,3 +95,11 @@ class Number(models.Model):
         verbose_name = "Geektech в цифрах"
         verbose_name_plural = "Geektech в цифрах"
 
+class Mailing(models.Model):
+    email = models.EmailField(verbose_name="Почта")
+    def __str__(self):
+        return f"{self.email} "
+
+    class Meta:
+        verbose_name_plural = "Полученные сообщения "
+        verbose_name = "Полученные сообщения "  

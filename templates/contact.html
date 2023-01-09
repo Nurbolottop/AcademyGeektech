@@ -51,7 +51,9 @@
                            <div class="col-md-12 col-lg-6 yellow-bg">
                                 <div class="contact-form-wrap">
                                     <h2 class="contact-title">ОТПРАВИТЬ СООБЩЕНИЕ</h2>
-                                    <form id="contact-form" action="mail.php" method="post">
+                                    <form  method="POST">
+                                        {%csrf_token %}
+
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="contact-form-style mb-20">
