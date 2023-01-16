@@ -13,7 +13,7 @@
                 <h1>{{slide.name_slide1}}</h1>
                 <p>{{slide.description_slide1}}</p>
                 <div class="slider-btn">
-                    <a class="button-default" href="{% url 'course'%}">View Courses</a>
+                    <a class="button-default" href="{% url 'course'%}">Посмтореть  Курсы/a>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <h1>{{slide.name_slide2}}</h1>
                 <p>{{slide.description_slide2}}</p>
                 <div class="slider-btn">
-                    <a class="button-default" href="{% url 'course'%}">View Courses</a>
+                    <a class="button-default" href="{% url 'course'%}">Посмтореть Курсы</a>
                 </div>
             </div>
         </div>
@@ -131,20 +131,20 @@
         </div>
         <div class="row">
             {%for news in news%}
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="single-item mb-50">
-                                    <div class="single-item-image overlay-effect">
-                                        <a href="{% url 'news_detail' news.id%}"><img src="{{news.image.url}}" alt=""></a>
-                                        
-                                    </div>
-                                    <div class="single-item-text">
-                                        <h4><a href="{% url 'news_detail' news.id%}">{{news.name}}</a></h4>
-                                        <p>{{news.description}}</p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            {%endfor%}
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-item mb-50">
+                    <div class="single-item-image overlay-effect">
+                        <a href="{% url 'news_detail' news.id%}"><img src="{{news.image.url}}" alt=""></a>
+                        
+                    </div>
+                    <div class="single-item-text">
+                        <h4><a href="{% url 'news_detail' news.id%}">{{news.name}}</a></h4>
+                        <p>{{news.description}}</p>
+                        
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
         </div>
     </div>
 </div>
@@ -350,13 +350,7 @@
             <div class="col-lg-4 col-md-6" >
                 <div class="single-event-item">
                     <div class="single-event-image">
-                        <a >
-
-                            <img src="{{it.image.url}}" style="max-width:4`00px;"
-                             alt="">
-                            
-                        </a>
-
+                    <a ><img src="{{it.image.url}}" style="max-width:400px;"alt=""></a>
                     </div>
                     <div class="single-event-text">
                         <h3><a >{{it.name}}</a></h3>

@@ -1,5 +1,2 @@
+.env
 venv/
-db.sqlite
-manage.py
-media/
-geektech/
