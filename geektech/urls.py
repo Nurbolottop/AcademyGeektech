@@ -26,7 +26,7 @@ from apps.gallery.views import gallery
 from apps.news.views import news, news_details
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name="index"),
+    path('', index, name = "index"),
     path('contact/', contact, name="contact"),
     path('course/', course, name="course"),
     path('course_detail/', course_details, name="course_detail"),
@@ -37,4 +37,4 @@ urlpatterns = [
     path('team_detail/', team_detail, name="team_detail"),
 
 ]
-urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL,docucment_root = settings.MEDIA_ROOT)
